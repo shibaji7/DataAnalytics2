@@ -96,6 +96,7 @@ def find_nearest_dict_val(dict_, vals):
 
 
 def sample_from_pdf(vals, counts, num):
+    num = int(num)
     inv_ecdf_d = get_inverse_ecdf_dict(vals, counts)
     rand_samp = np.random.rand(num)
     pdf_samp = find_nearest_dict_val(inv_ecdf_d, rand_samp)
